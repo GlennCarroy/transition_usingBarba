@@ -51,11 +51,11 @@ window.addEventListener('popstate', changePage);
 
 document.addEventListener('click', function(e) {
   var el = e.target;
-  console.log(el);
+  console.log(el.className);
   while (el && !el.href) {
     el = el.parentNode;
   }
-  if (el.protocol !== "https:") {
+  if (el.className == "js-ClickOnSite") {
     e.preventDefault();
 
     history.pushState(null, null , el.href);
