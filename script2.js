@@ -55,7 +55,6 @@ document.addEventListener('click', function(e) {
   while (el && !el.href) {
     el = el.parentNode;
   }
-
   if (el) {
     e.preventDefault();
     history.pushState(null, null , el.href);
@@ -63,4 +62,5 @@ document.addEventListener('click', function(e) {
 
     return;
   }
+  
 });
